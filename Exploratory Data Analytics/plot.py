@@ -31,9 +31,6 @@ print(f'MRI scan on coronal plane: {mri_coronal.shape}')
 print(f'MRI scan on axial plane: {mri_axial.shape}')
 print(f'MRI scan on sagittal plane: {mri_sagittal.shape}')
 
-x = np.linspace(0, 20, 100)
-plt.plot(x, np.sin(x))
-# plt.show()
 
 fig, (ax1, ax2, ax3) = plt.subplots(1, 3, figsize=(15, 5))
 
@@ -165,6 +162,6 @@ class KneePlot():
     def resize(self, figsize): 
         self.figsize = figsize
 
-plot=KneePlot(cases)
-plot.draw()
-plot.show()
+plots=KneePlot(cases)
+plots.draw()
+# plt.show()

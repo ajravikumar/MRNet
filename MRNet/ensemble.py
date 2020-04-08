@@ -27,7 +27,7 @@ def extract_predictions(task, plane, train=True):
     models = os.listdir('../models/')
 
     model_name = list(filter(lambda name: task in name and plane in name, models))[0]
-    model_path = f'../models/{model_name}'
+    model_path = f'../models/{model_name}.pt'
 
     mrnet = torch.load(model_path)
     _ = mrnet.eval()
